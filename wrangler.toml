@@ -43,3 +43,8 @@ new_sqlite_classes = [ "NotificationsHub" ]
 [[migrations]]
 tag = "v2-backup-transfer-runner"
 new_sqlite_classes = [ "BackupTransferRunner" ]
+
+[vars]
+# Web vault off: the server could otherwise serve JS that sees the master password.
+# Turn on (0) only for account settings, then back off. ctrl TASK-75 spec.
+HIDE_WEB_VAULT = "1"
